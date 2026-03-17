@@ -1,0 +1,35 @@
+{
+  "name": "fluent-booking-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP Server for Fluent Booking - Manage calendars, events, bookings and availability from AI assistants",
+  "type": "module",
+  "main": "dist/fluent-booking-mcp-server.js",
+  "bin": {
+    "fluent-booking-mcp": "./dist/fluent-booking-mcp-server.js"
+  },
+  "scripts": {
+    "build": "tsc && chmod +x dist/fluent-booking-mcp-server.js",
+    "dev": "tsc --watch",
+    "start": "FLUENT_BOOKING_API_USERNAME='$FLUENT_BOOKING_API_USERNAME' FLUENT_BOOKING_API_PASSWORD='$FLUENT_BOOKING_API_PASSWORD' node dist/fluent-booking-mcp-server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mcp",
+    "fluent-booking",
+    "scheduling",
+    "calendar",
+    "bookings",
+    "api"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.20.1",
+    "axios": "^1.6.2",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3"
+  }
+}
